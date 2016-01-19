@@ -1,0 +1,2 @@
+C:\Users\Sven\Fontys\P3\LP\Software\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\bin\Debug\LifePerformance - Sven Nottelman.exe.config
+C:\Users\Sven\Fontys\P3\LP\Software\LifePerformance\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\bin\Debug\LifePerformance - Sven Nottelman.exe.config
