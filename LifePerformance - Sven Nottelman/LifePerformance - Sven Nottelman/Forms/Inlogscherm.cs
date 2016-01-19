@@ -36,7 +36,7 @@ namespace LifePerformance___Sven_Nottelman
                     lblSucces.Visible = false;
                     if (error == string.Empty)
                     {
-                        error = "Geen resultaat gevonden";
+                        error = "Ongeldige gebruikersnaam en/of wachtwoord!";
                     }
                     MessageBox.Show(error);
                 }

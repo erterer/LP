@@ -35,11 +35,7 @@ namespace LifePerformance___Sven_Nottelman.Data
                         string dbUsername = Convert.ToString(reader["USERNAME"]);
                         string dbPassword = Convert.ToString(reader["PASSWORD"]);
 
-                        if(dbUsername.ToLower() != username || dbPassword != password)
-                        {
-                            error = "Username of wachtwoord is ongeldig";
-                        }
-                        else
+                        if(dbUsername.ToLower() == username && dbPassword == password)
                         {
                             return true;
                         }
