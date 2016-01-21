@@ -1,11 +1,11 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using LifePerformance___Sven_Nottelman;
 using LifePerformance___Sven_Nottelman.Data;
 using LifePerformance___Sven_Nottelman.Forms;
 using LifePerformance___Sven_Nottelman.Logic;
 using LifePerformance___Sven_Nottelman.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
-using LifePerformance___Sven_Nottelman;
 
 namespace LivePerformanceTests
 {
