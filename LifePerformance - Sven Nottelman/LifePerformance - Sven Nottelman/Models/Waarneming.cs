@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace LifePerformance___Sven_Nottelman.Models
 {
+    [DataContract(Namespace = "")]
     public class Waarneming
     {
         //Naam van de waarneming
+        [DataMember]
         public string Naam { get; set; }
 
         //Type waarneming
+        [DataMember]
         public SoortWaarneming Soort { get; set; }
 
         //Tijdstip van de waarneming
+        [DataMember]
         public DateTime Tijdstip { get; set; }
 
         //Aantal punten wat wordt gegeven voor de waarneming
+        [DataMember]
         public int Punten { get; set; }
 
         //Het dier dat is waargenomen
+        [DataMember]
         public Dier Dier { get; set; }
 
         /// <summary>

@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace LifePerformance___Sven_Nottelman.Models
 {
     public abstract class Dier
     {
         //Naam van een dier
+        [DataMember]
         public string Naam { get; set; }
 
         //Afkorting van een dier
+        [DataMember]
         public string Afkorting { get; set; }
 
         /// <summary>
