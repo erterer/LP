@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\IProject.cs" />
+    <Compile Include="Data\ProjectOracleContext.cs" />
     <Compile Include="Forms\formBezoek.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +68,7 @@
     <Compile Include="Forms\Hoofdscherm.Designer.cs">
       <DependentUpon>Hoofdscherm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\ProjectRepository.cs" />
     <Compile Include="Models\Bezoek.cs" />
     <Compile Include="Models\Dier.cs" />
     <Compile Include="Models\Gebied.cs" />
@@ -77,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\formBezoek.resx">
       <DependentUpon>formBezoek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hoofdscherm.resx">
+      <DependentUpon>Hoofdscherm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,9 +106,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logic\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -36,8 +36,8 @@
             this.rbSelecteren = new System.Windows.Forms.RadioButton();
             this.lblSoort = new System.Windows.Forms.Label();
             this.cbSoort = new System.Windows.Forms.ComboBox();
-            this.nudUur = new System.Windows.Forms.NumericUpDown();
-            this.nudSeconde = new System.Windows.Forms.NumericUpDown();
+            this.nudUren = new System.Windows.Forms.NumericUpDown();
+            this.nudMinuten = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbGebied)).BeginInit();
             this.gbWaarneming.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUur)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSeconde)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUren)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinuten)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPunten)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,8 +72,8 @@
             this.gbWaarneming.Controls.Add(this.label3);
             this.gbWaarneming.Controls.Add(this.label1);
             this.gbWaarneming.Controls.Add(this.label2);
-            this.gbWaarneming.Controls.Add(this.nudSeconde);
-            this.gbWaarneming.Controls.Add(this.nudUur);
+            this.gbWaarneming.Controls.Add(this.nudMinuten);
+            this.gbWaarneming.Controls.Add(this.nudUren);
             this.gbWaarneming.Controls.Add(this.cbSoort);
             this.gbWaarneming.Controls.Add(this.lblSoort);
             this.gbWaarneming.Controls.Add(this.rbSelecteren);
@@ -146,29 +146,29 @@
             this.cbSoort.Size = new System.Drawing.Size(185, 21);
             this.cbSoort.TabIndex = 7;
             // 
-            // nudUur
+            // nudUren
             // 
-            this.nudUur.Location = new System.Drawing.Point(9, 190);
-            this.nudUur.Maximum = new decimal(new int[] {
+            this.nudUren.Location = new System.Drawing.Point(9, 190);
+            this.nudUren.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
-            this.nudUur.Name = "nudUur";
-            this.nudUur.Size = new System.Drawing.Size(39, 20);
-            this.nudUur.TabIndex = 8;
+            this.nudUren.Name = "nudUren";
+            this.nudUren.Size = new System.Drawing.Size(39, 20);
+            this.nudUren.TabIndex = 8;
             // 
-            // nudSeconde
+            // nudMinuten
             // 
-            this.nudSeconde.Location = new System.Drawing.Point(70, 190);
-            this.nudSeconde.Maximum = new decimal(new int[] {
+            this.nudMinuten.Location = new System.Drawing.Point(70, 190);
+            this.nudMinuten.Maximum = new decimal(new int[] {
             60,
             0,
             0,
             0});
-            this.nudSeconde.Name = "nudSeconde";
-            this.nudSeconde.Size = new System.Drawing.Size(39, 20);
-            this.nudSeconde.TabIndex = 9;
+            this.nudMinuten.Name = "nudMinuten";
+            this.nudMinuten.Size = new System.Drawing.Size(39, 20);
+            this.nudMinuten.TabIndex = 9;
             // 
             // label1
             // 
@@ -248,8 +248,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbGebied)).EndInit();
             this.gbWaarneming.ResumeLayout(false);
             this.gbWaarneming.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUur)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSeconde)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUren)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinuten)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPunten)).EndInit();
             this.ResumeLayout(false);
 
@@ -267,8 +267,8 @@
         private System.Windows.Forms.Label lblSoort;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown nudSeconde;
-        private System.Windows.Forms.NumericUpDown nudUur;
+        private System.Windows.Forms.NumericUpDown nudMinuten;
+        private System.Windows.Forms.NumericUpDown nudUren;
         private System.Windows.Forms.NumericUpDown nudPunten;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbAfkorting;

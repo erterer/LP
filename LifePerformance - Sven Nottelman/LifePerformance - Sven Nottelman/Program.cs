@@ -16,7 +16,7 @@ namespace LifePerformance___Sven_Nottelman
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formBezoek());
+            Application.Run(new Forms.Hoofdscherm());
         }
     }
 }

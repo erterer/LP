@@ -15,13 +15,17 @@ namespace LifePerformance___Sven_Nottelman
 {
     public partial class formBezoek : Form
     {
+        //Het geopende project
+        private Project project;
+
         //Maken van een bezoek
         private Bezoek bezoek;
 
         //Maken van de form en plaatsen van de plattegrond
-        public formBezoek()
+        public formBezoek(Project project)
         {
             InitializeComponent();
+            this.project = project;
             LaadGebied();
         }
 
@@ -59,13 +63,27 @@ namespace LifePerformance___Sven_Nottelman
                     graphics.DrawString(tekst, this.Font, Brushes.Black, point, sf);
 
                     //Maken van een waarneming
-                    SoortWaarneming soort;
-                    DateTime tijdstip = new DateTime()
-                    bezoek.waarnemingen.Add(new Waarneming(tbNaamDier.Text, soort, ))
+                    int uur = Convert.ToInt32(nudUren.Value);
+                    int min = Convert.ToInt32(nudMinuten.Value);
+                    int punten = Convert.ToInt32(nudPunten.Value);
+                    DateTime tijdstip = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, uur, min, 10);
+
+                    if (cbSoort.Text == "Vogel aanwezig")
+                    {
+                        bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.VogelAanwezig, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
+                    }
+                    else if(cbSoort.Text == "Territorium indicerend")
+                    {
+                        bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.TerritorumInciderend, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
+                    }
+                    else if(cbSoort.Text == "Nest indicerend")
+                    {
+                        bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.NestIndicerend, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Vul een naam in!");
+                    MessageBox.Show("Er ontbreken gegevens!");
                 }
             }
             else if(rbSelecteren.Checked == true)
