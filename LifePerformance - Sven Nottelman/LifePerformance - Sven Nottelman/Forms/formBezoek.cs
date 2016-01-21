@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LifePerformance___Sven_Nottelman.Data;
+using LifePerformance___Sven_Nottelman.Logic;
 using LifePerformance___Sven_Nottelman.Models;
 
 namespace LifePerformance___Sven_Nottelman
@@ -21,12 +22,16 @@ namespace LifePerformance___Sven_Nottelman
         //Maken van een bezoek
         private Bezoek bezoek;
 
+        private DierenRepository repo;
+
         //Maken van de form en plaatsen van de plattegrond
         public formBezoek(Project project)
         {
             InitializeComponent();
             this.project = project;
+            repo = new DierenRepository(new DierenOracleContext());
             LaadGebied();
+            LaadDieren();
         }
 
         /// <summary>
@@ -43,12 +48,25 @@ namespace LifePerformance___Sven_Nottelman
             }
         }
 
+        private void LaadDieren()
+        {
+            repo.HaalDierenOp();
+            if(repo.Error != string.Empty)
+            {
+                MessageBox.Show(repo.Error);
+            }
+            lbDieren.Items.Clear();
+            foreach(var v in repo.Dieren)
+            {
+                lbDieren.Items.Add(v.Naam + "  " + v.Afkorting);
+            }
+        }
+
         private void pbGebied_MouseClick(object sender, MouseEventArgs e)
         {
             if (rbMaken.Checked == true)
             {
-                if (tbNaam.Text != string.Empty && tbNaamDier.Text != string.Empty && tbAfkorting.Text != string.Empty
-                    && nudPunten.Value != 0)
+                if (tbNaam.Text != string.Empty && lbDieren.Text != string.Empty && nudPunten.Value != 0)
                 {
                     //Aanmaken graphics en zetten tekst
                     Graphics graphics = pbGebied.CreateGraphics();
@@ -68,18 +86,18 @@ namespace LifePerformance___Sven_Nottelman
                     int punten = Convert.ToInt32(nudPunten.Value);
                     DateTime tijdstip = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, uur, min, 10);
 
-                    if (cbSoort.Text == "Vogel aanwezig")
-                    {
-                        bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.VogelAanwezig, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
-                    }
-                    else if(cbSoort.Text == "Territorium indicerend")
-                    {
-                        bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.TerritorumInciderend, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
-                    }
-                    else if(cbSoort.Text == "Nest indicerend")
-                    {
-                        bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.NestIndicerend, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
-                    }
+                    //if (cbSoort.Text == "Vogel aanwezig")
+                    //{
+                    //    bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.VogelAanwezig, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
+                    //}
+                    //else if(cbSoort.Text == "Territorium indicerend")
+                    //{
+                    //    bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.TerritorumInciderend, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
+                    //}
+                    //else if(cbSoort.Text == "Nest indicerend")
+                    //{
+                    //    bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.NestIndicerend, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
+                    //}
                 }
                 else
                 {

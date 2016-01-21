@@ -30,27 +30,25 @@
         {
             this.pbGebied = new System.Windows.Forms.PictureBox();
             this.gbWaarneming = new System.Windows.Forms.GroupBox();
-            this.lblNaam = new System.Windows.Forms.Label();
-            this.tbNaam = new System.Windows.Forms.TextBox();
-            this.rbMaken = new System.Windows.Forms.RadioButton();
-            this.rbSelecteren = new System.Windows.Forms.RadioButton();
-            this.lblSoort = new System.Windows.Forms.Label();
-            this.cbSoort = new System.Windows.Forms.ComboBox();
-            this.nudUren = new System.Windows.Forms.NumericUpDown();
-            this.nudMinuten = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.nudPunten = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.nudPunten = new System.Windows.Forms.NumericUpDown();
-            this.tbNaamDier = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbAfkorting = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.nudMinuten = new System.Windows.Forms.NumericUpDown();
+            this.nudUren = new System.Windows.Forms.NumericUpDown();
+            this.cbSoort = new System.Windows.Forms.ComboBox();
+            this.lblSoort = new System.Windows.Forms.Label();
+            this.rbSelecteren = new System.Windows.Forms.RadioButton();
+            this.rbMaken = new System.Windows.Forms.RadioButton();
+            this.tbNaam = new System.Windows.Forms.TextBox();
+            this.lblNaam = new System.Windows.Forms.Label();
+            this.lbDieren = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbGebied)).BeginInit();
             this.gbWaarneming.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUren)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinuten)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPunten)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinuten)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUren)).BeginInit();
             this.SuspendLayout();
             // 
             // pbGebied
@@ -64,9 +62,7 @@
             // 
             // gbWaarneming
             // 
-            this.gbWaarneming.Controls.Add(this.tbAfkorting);
-            this.gbWaarneming.Controls.Add(this.label4);
-            this.gbWaarneming.Controls.Add(this.tbNaamDier);
+            this.gbWaarneming.Controls.Add(this.lbDieren);
             this.gbWaarneming.Controls.Add(this.label5);
             this.gbWaarneming.Controls.Add(this.nudPunten);
             this.gbWaarneming.Controls.Add(this.label3);
@@ -82,93 +78,35 @@
             this.gbWaarneming.Controls.Add(this.lblNaam);
             this.gbWaarneming.Location = new System.Drawing.Point(1183, 12);
             this.gbWaarneming.Name = "gbWaarneming";
-            this.gbWaarneming.Size = new System.Drawing.Size(223, 407);
+            this.gbWaarneming.Size = new System.Drawing.Size(223, 669);
             this.gbWaarneming.TabIndex = 1;
             this.gbWaarneming.TabStop = false;
             this.gbWaarneming.Text = "Waarneming";
             // 
-            // lblNaam
+            // label5
             // 
-            this.lblNaam.AutoSize = true;
-            this.lblNaam.Location = new System.Drawing.Point(6, 61);
-            this.lblNaam.Name = "lblNaam";
-            this.lblNaam.Size = new System.Drawing.Size(38, 13);
-            this.lblNaam.TabIndex = 0;
-            this.lblNaam.Text = "Naam:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 297);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Naam waargenomen dier:";
             // 
-            // tbNaam
+            // nudPunten
             // 
-            this.tbNaam.Location = new System.Drawing.Point(9, 77);
-            this.tbNaam.Name = "tbNaam";
-            this.tbNaam.Size = new System.Drawing.Size(185, 20);
-            this.tbNaam.TabIndex = 1;
+            this.nudPunten.Location = new System.Drawing.Point(9, 247);
+            this.nudPunten.Name = "nudPunten";
+            this.nudPunten.Size = new System.Drawing.Size(100, 20);
+            this.nudPunten.TabIndex = 12;
             // 
-            // rbMaken
+            // label3
             // 
-            this.rbMaken.AutoSize = true;
-            this.rbMaken.Location = new System.Drawing.Point(9, 19);
-            this.rbMaken.Name = "rbMaken";
-            this.rbMaken.Size = new System.Drawing.Size(58, 17);
-            this.rbMaken.TabIndex = 2;
-            this.rbMaken.TabStop = true;
-            this.rbMaken.Text = "Maken";
-            this.rbMaken.UseVisualStyleBackColor = true;
-            // 
-            // rbSelecteren
-            // 
-            this.rbSelecteren.AutoSize = true;
-            this.rbSelecteren.Location = new System.Drawing.Point(118, 19);
-            this.rbSelecteren.Name = "rbSelecteren";
-            this.rbSelecteren.Size = new System.Drawing.Size(76, 17);
-            this.rbSelecteren.TabIndex = 3;
-            this.rbSelecteren.TabStop = true;
-            this.rbSelecteren.Text = "Selecteren";
-            this.rbSelecteren.UseVisualStyleBackColor = true;
-            // 
-            // lblSoort
-            // 
-            this.lblSoort.AutoSize = true;
-            this.lblSoort.Location = new System.Drawing.Point(6, 120);
-            this.lblSoort.Name = "lblSoort";
-            this.lblSoort.Size = new System.Drawing.Size(95, 13);
-            this.lblSoort.TabIndex = 6;
-            this.lblSoort.Text = "Soort waarneming:";
-            // 
-            // cbSoort
-            // 
-            this.cbSoort.FormattingEnabled = true;
-            this.cbSoort.Items.AddRange(new object[] {
-            "Vogel aanwezig",
-            "Territorium indicerend",
-            "Nest indicerend"});
-            this.cbSoort.Location = new System.Drawing.Point(9, 136);
-            this.cbSoort.Name = "cbSoort";
-            this.cbSoort.Size = new System.Drawing.Size(185, 21);
-            this.cbSoort.TabIndex = 7;
-            // 
-            // nudUren
-            // 
-            this.nudUren.Location = new System.Drawing.Point(9, 190);
-            this.nudUren.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.nudUren.Name = "nudUren";
-            this.nudUren.Size = new System.Drawing.Size(39, 20);
-            this.nudUren.TabIndex = 8;
-            // 
-            // nudMinuten
-            // 
-            this.nudMinuten.Location = new System.Drawing.Point(70, 190);
-            this.nudMinuten.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.nudMinuten.Name = "nudMinuten";
-            this.nudMinuten.Size = new System.Drawing.Size(39, 20);
-            this.nudMinuten.TabIndex = 9;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 231);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Aantal punten:";
             // 
             // label1
             // 
@@ -188,53 +126,96 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Tijdstip:";
             // 
-            // label3
+            // nudMinuten
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 231);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Aantal punten:";
+            this.nudMinuten.Location = new System.Drawing.Point(70, 190);
+            this.nudMinuten.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudMinuten.Name = "nudMinuten";
+            this.nudMinuten.Size = new System.Drawing.Size(39, 20);
+            this.nudMinuten.TabIndex = 9;
             // 
-            // nudPunten
+            // nudUren
             // 
-            this.nudPunten.Location = new System.Drawing.Point(9, 247);
-            this.nudPunten.Name = "nudPunten";
-            this.nudPunten.Size = new System.Drawing.Size(100, 20);
-            this.nudPunten.TabIndex = 12;
+            this.nudUren.Location = new System.Drawing.Point(9, 190);
+            this.nudUren.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.nudUren.Name = "nudUren";
+            this.nudUren.Size = new System.Drawing.Size(39, 20);
+            this.nudUren.TabIndex = 8;
             // 
-            // tbNaamDier
+            // cbSoort
             // 
-            this.tbNaamDier.Location = new System.Drawing.Point(9, 313);
-            this.tbNaamDier.Name = "tbNaamDier";
-            this.tbNaamDier.Size = new System.Drawing.Size(185, 20);
-            this.tbNaamDier.TabIndex = 16;
+            this.cbSoort.FormattingEnabled = true;
+            this.cbSoort.Items.AddRange(new object[] {
+            "Vogel aanwezig",
+            "Territorium indicerend",
+            "Nest indicerend"});
+            this.cbSoort.Location = new System.Drawing.Point(9, 136);
+            this.cbSoort.Name = "cbSoort";
+            this.cbSoort.Size = new System.Drawing.Size(185, 21);
+            this.cbSoort.TabIndex = 7;
             // 
-            // label5
+            // lblSoort
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 297);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Naam waargenomen dier:";
+            this.lblSoort.AutoSize = true;
+            this.lblSoort.Location = new System.Drawing.Point(6, 120);
+            this.lblSoort.Name = "lblSoort";
+            this.lblSoort.Size = new System.Drawing.Size(95, 13);
+            this.lblSoort.TabIndex = 6;
+            this.lblSoort.Text = "Soort waarneming:";
             // 
-            // tbAfkorting
+            // rbSelecteren
             // 
-            this.tbAfkorting.Location = new System.Drawing.Point(9, 370);
-            this.tbAfkorting.Name = "tbAfkorting";
-            this.tbAfkorting.Size = new System.Drawing.Size(185, 20);
-            this.tbAfkorting.TabIndex = 19;
+            this.rbSelecteren.AutoSize = true;
+            this.rbSelecteren.Location = new System.Drawing.Point(118, 19);
+            this.rbSelecteren.Name = "rbSelecteren";
+            this.rbSelecteren.Size = new System.Drawing.Size(76, 17);
+            this.rbSelecteren.TabIndex = 3;
+            this.rbSelecteren.TabStop = true;
+            this.rbSelecteren.Text = "Selecteren";
+            this.rbSelecteren.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // rbMaken
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 354);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Afkorting dier:";
+            this.rbMaken.AutoSize = true;
+            this.rbMaken.Location = new System.Drawing.Point(9, 19);
+            this.rbMaken.Name = "rbMaken";
+            this.rbMaken.Size = new System.Drawing.Size(58, 17);
+            this.rbMaken.TabIndex = 2;
+            this.rbMaken.TabStop = true;
+            this.rbMaken.Text = "Maken";
+            this.rbMaken.UseVisualStyleBackColor = true;
+            // 
+            // tbNaam
+            // 
+            this.tbNaam.Location = new System.Drawing.Point(9, 77);
+            this.tbNaam.Name = "tbNaam";
+            this.tbNaam.Size = new System.Drawing.Size(185, 20);
+            this.tbNaam.TabIndex = 1;
+            // 
+            // lblNaam
+            // 
+            this.lblNaam.AutoSize = true;
+            this.lblNaam.Location = new System.Drawing.Point(6, 61);
+            this.lblNaam.Name = "lblNaam";
+            this.lblNaam.Size = new System.Drawing.Size(38, 13);
+            this.lblNaam.TabIndex = 0;
+            this.lblNaam.Text = "Naam:";
+            // 
+            // lbDieren
+            // 
+            this.lbDieren.FormattingEnabled = true;
+            this.lbDieren.Location = new System.Drawing.Point(9, 313);
+            this.lbDieren.Name = "lbDieren";
+            this.lbDieren.Size = new System.Drawing.Size(185, 316);
+            this.lbDieren.TabIndex = 16;
             // 
             // formBezoek
             // 
@@ -248,9 +229,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbGebied)).EndInit();
             this.gbWaarneming.ResumeLayout(false);
             this.gbWaarneming.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUren)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinuten)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPunten)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinuten)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUren)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,10 +252,8 @@
         private System.Windows.Forms.NumericUpDown nudUren;
         private System.Windows.Forms.NumericUpDown nudPunten;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbAfkorting;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbNaamDier;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox lbDieren;
     }
 }
 

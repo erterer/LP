@@ -8,7 +8,7 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace LifePerformance___Sven_Nottelman.Data
 {
-    public class ProjectOracleContext : IProject
+    public class DierenOracleContext : IDieren
     {
         //Database instantie
         public Database Database { get; }
@@ -16,30 +16,31 @@ namespace LifePerformance___Sven_Nottelman.Data
         /// <summary>
         /// Aanmaken van een connectie naar de database
         /// </summary>
-        public ProjectOracleContext()
+        public DierenOracleContext()
         {
             Database = new Database();
         }
 
         /// <summary>
-        /// Deze methode haalt alle projecten op die open staan
+        /// Deze methode haalt alle dieren op uit de database
         /// </summary>
-        /// <param name="projecten">Lijst met alle teruggekomen projecten</param>
-        /// <param name="error">Een error string, gevuld als er een error is opgetreden</param>
-        /// <returns>Geeft true terug als alles succesvol is</returns>
-        public bool HaalProjectenOp(out List<Project> projecten, out string error)
+        /// <param name="dieren">Lijst met alle dieren</param>
+        /// <param name="error">Wordt weergegeven als er een error is</param>
+        /// <returns>True wordt teruggegeven als alles is gelukt</returns>
+        public bool HaalAlleDierenOp(out List<Dier> dieren, out string error)
         {
-            projecten = new List<Project>();
+            dieren = new List<Dier>();
             error = string.Empty;
             try
             {
-                string query = "SELECT NAAM FROM PROJECT";
+                string query = "SELECT NAAM, AFKORTING FROM DIER";
                 OracleCommand command = Database.CreateOracleCommand(query);
                 OracleDataReader datareader = Database.ExecuteQuery(command);
                 while (datareader.Read())
                 {
                     string naam = Convert.ToString(datareader["NAAM"]);
-                    projecten.Add(new Project(naam));
+                    string afkorting = Convert.ToString(datareader["AFKORTING"]);
+                    dieren.Add(new Vogel(naam, afkorting));
                 }
                 return true;
             }

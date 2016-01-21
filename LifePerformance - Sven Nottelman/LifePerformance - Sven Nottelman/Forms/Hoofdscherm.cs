@@ -18,12 +18,10 @@ namespace LifePerformance___Sven_Nottelman.Forms
         //Repository voor de database
         private ProjectRepository repo;
 
-        private List<Project> Projecten { get; set; }
         public Hoofdscherm()
         {
             InitializeComponent();
             repo = new ProjectRepository(new ProjectOracleContext());
-            Projecten = new List<Project>();
             LaadProjecten();
         }
 
@@ -33,7 +31,10 @@ namespace LifePerformance___Sven_Nottelman.Forms
         private void LaadProjecten()
         {
             repo.HaalProjectenOp();
-
+            if (repo.Error != string.Empty)
+            {
+                MessageBox.Show(repo.Error);
+            }
             lbProjecten.Items.Clear();
             foreach(var v in repo.Projecten)
             {

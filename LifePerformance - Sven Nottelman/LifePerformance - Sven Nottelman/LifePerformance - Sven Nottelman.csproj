@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\DierenOracleContext.cs" />
+    <Compile Include="Data\IDieren.cs" />
     <Compile Include="Data\IProject.cs" />
     <Compile Include="Data\ProjectOracleContext.cs" />
     <Compile Include="Forms\formBezoek.cs">
@@ -56,18 +58,13 @@
     <Compile Include="Forms\formBezoek.Designer.cs">
       <DependentUpon>formBezoek.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\formWaarneming.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\formWaarneming.Designer.cs">
-      <DependentUpon>formWaarneming.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Hoofdscherm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Hoofdscherm.Designer.cs">
       <DependentUpon>Hoofdscherm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\DierenRepository.cs" />
     <Compile Include="Logic\ProjectRepository.cs" />
     <Compile Include="Models\Bezoek.cs" />
     <Compile Include="Models\Dier.cs" />
