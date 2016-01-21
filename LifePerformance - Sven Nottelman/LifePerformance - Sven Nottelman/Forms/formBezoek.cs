@@ -174,7 +174,7 @@ namespace LifePerformance___Sven_Nottelman
         /// <param name="e"></param>
         private void btnOpties_Click(object sender, EventArgs e)
         {
-            var f = new Forms.formOpties();
+            var f = new Forms.formOpties(bezoek, project);
             f.ShowDialog();
         }
     }

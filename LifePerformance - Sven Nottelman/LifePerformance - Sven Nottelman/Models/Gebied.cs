@@ -8,6 +8,9 @@ namespace LifePerformance___Sven_Nottelman.Models
 {
     public class Gebied
     {
+        //Projectinstantie voor het ophalen van de lijst met bezoeken en waarnemingen
+        private Project Project { get; set; }
+
         //Naam van een gebied
         public string Naam { get; set; }
 
@@ -27,7 +30,11 @@ namespace LifePerformance___Sven_Nottelman.Models
         /// <returns>Geeft true terug als de methode succesvol is uitgevoerd</returns>
         public bool PrintBroedparen(Dier dier)
         {
-            throw new NotImplementedException();
+            foreach(var p in Project.bezoeken)
+            {
+
+            }
+            return true;
         }
     }
 }

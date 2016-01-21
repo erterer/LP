@@ -8,6 +8,7 @@ namespace LifePerformance___Sven_Nottelman.Models
 {
     public class Project
     {
+        public List<Bezoek> bezoeken { get; set; }
         //Naam van een project
         public string Naam { get; set; }
 
@@ -18,6 +19,7 @@ namespace LifePerformance___Sven_Nottelman.Models
         public Project(string naam)
         {
             Naam = naam;
+            bezoeken = new List<Bezoek>();
         }
 
         /// <summary>

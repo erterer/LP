@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifePerformance - Sven Nottelman", "LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman.csproj", "{57D7BDA0-828E-4A2A-9C9C-E295FE4CBFFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivePerformanceTests", "LivePerformanceTests\LivePerformanceTests.csproj", "{DD6F9C61-A755-466C-B6F2-901641E6266B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{57D7BDA0-828E-4A2A-9C9C-E295FE4CBFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57D7BDA0-828E-4A2A-9C9C-E295FE4CBFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57D7BDA0-828E-4A2A-9C9C-E295FE4CBFFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD6F9C61-A755-466C-B6F2-901641E6266B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD6F9C61-A755-466C-B6F2-901641E6266B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD6F9C61-A755-466C-B6F2-901641E6266B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD6F9C61-A755-466C-B6F2-901641E6266B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

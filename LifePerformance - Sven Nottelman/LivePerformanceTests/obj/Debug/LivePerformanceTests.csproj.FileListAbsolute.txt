@@ -1,0 +1,10 @@
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\bin\Debug\LivePerformanceTests.dll
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\bin\Debug\LivePerformanceTests.pdb
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\bin\Debug\LifePerformance - Sven Nottelman.exe
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\bin\Debug\LifePerformance - Sven Nottelman.pdb
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\obj\Debug\LivePerformanceTests.csprojResolveAssemblyReference.cache
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\obj\Debug\LivePerformanceTests.dll
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LivePerformanceTests\obj\Debug\LivePerformanceTests.pdb

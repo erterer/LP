@@ -11,3 +11,4 @@ C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sv
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance - Sven Nottelman.pdb
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance___Sven_Nottelman.formBezoek.resources
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance___Sven_Nottelman.Forms.Hoofdscherm.resources
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance___Sven_Nottelman.Forms.formOpties.resources
