@@ -71,6 +71,17 @@ namespace LifePerformance___Sven_Nottelman
             }
         }
 
+        private void WisInput()
+        {
+            tbNaam.Text = string.Empty;
+            cbSoort.SelectedItem = string.Empty;
+            nudMinuten.Value = 0;
+            nudPunten.Value = 0;
+            nudUren.Value = 0;
+            rbMaken.Checked = false;
+            rbSelecteren.Checked = false;
+        }
+
         /// <summary>
         /// Deze muisklik maakt een label aan op de kaart en maakt hier direct een waarneming van, hiervoor worden
         /// de ingevulde gegevens gebruikt
@@ -79,14 +90,15 @@ namespace LifePerformance___Sven_Nottelman
         /// <param name="e">Event mouseclick</param>
         private void pbGebied_MouseClick(object sender, MouseEventArgs e)
         {
+            //Dier toevoegen
             if (rbMaken.Checked == true)
             {
-                if (tbNaam.Text != string.Empty && lbDieren.Text != string.Empty && nudPunten.Value != 0)
+                //Controle op de input
+                if (tbNaam.Text != string.Empty || lbDieren.SelectedItem == null || nudPunten.Value != 0)
                 {
                     //Aanmaken graphics en zetten tekst
                     Graphics graphics = pbGebied.CreateGraphics();
                     string tekst = tbNaam.Text;
-                    tbNaam.Text = string.Empty;
 
                     //Tekenen van de label met de ingevulde waarde
                     var point = new Point(e.X, e.Y);
@@ -129,12 +141,30 @@ namespace LifePerformance___Sven_Nottelman
                 {
                     MessageBox.Show("Er ontbreken gegevens!");
                 }
+                WisInput();
             }
             else if(rbSelecteren.Checked == true)
             {
-
+                //nog niet ingevoegd
             }
             
+        }
+
+        /// <summary>
+        /// Deze button zorgt ervoor dat alle waarnemingen lokaal kunnen worden opgeslagen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnOpslaan_Click(object sender, EventArgs e)
+        {
+            if(bezoek.SaveToXML(bezoek) == true)
+            {
+                MessageBox.Show("Bezoek opgeslagen");
+            }
+            else
+            {
+                MessageBox.Show("Er is een onbekende fout opgetreden bij het opslaan");
+            }
         }
     }
 }

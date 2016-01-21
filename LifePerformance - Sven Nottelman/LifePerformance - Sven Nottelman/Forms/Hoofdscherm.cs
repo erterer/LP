@@ -49,11 +49,12 @@ namespace LifePerformance___Sven_Nottelman.Forms
         /// <param name="e"></param>
         private void btnOpenen_Click(object sender, EventArgs e)
         {
+            //Controle of de gegevens goed worden ingevuld
             if (lbProjecten.SelectedItem == null)
             {
                 MessageBox.Show("Selecteer een project");
             }
-            else if(nudMinutenStart.Value == 0 || nudMinutenEind.Value == 0 || nudUrenStart.Value == 0 || nudUrenEind.Value == 0)
+            else if(nudMinutenStart.Value == 0 && nudMinutenEind.Value == 0 && nudUrenStart.Value == 0 && nudUrenEind.Value == 0)
             {
                 MessageBox.Show("Vul geldige tijden in");
             }
@@ -67,6 +68,7 @@ namespace LifePerformance___Sven_Nottelman.Forms
             }
             else
             {
+                //Openen project en aanmaken nieuw bezoek
                 foreach (var v in repo.Projecten)
                 {
                     if (v.Naam == lbProjecten.SelectedItem.ToString())

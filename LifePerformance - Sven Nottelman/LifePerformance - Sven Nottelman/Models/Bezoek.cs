@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.IO;
 
 namespace LifePerformance___Sven_Nottelman.Models
 {
@@ -11,10 +13,10 @@ namespace LifePerformance___Sven_Nottelman.Models
         //Lijst met waarnemingen
         public List<Waarneming> waarnemingen { get; set; }
 
-        //Aanvangst van het bezoek, starttijd
+        //Aanvangst van het bezoek, datum en tijd
         public DateTime StartTijd { get; set; }
 
-        //Einddtijd van het bezoek
+        //Einddtijd van het bezoek, datum en tijd
         public DateTime EindTijd { get; set; }
 
         /// <summary>
@@ -37,7 +39,13 @@ namespace LifePerformance___Sven_Nottelman.Models
         /// <returns>Geeft true terug als de methode succesvol is uitgevoerd</returns>
         public bool SaveToXML(Bezoek bezoek)
         {
-            throw new NotImplementedException();
+            DataContractSerializer dcs = new DataContractSerializer(typeof(Persons), new List<Type> { typeof(Person), typeof(Persons) });
+
+            using (FileStream f = new FileStream(@"D:\Users\Sven\Desktop\Test.XML",
+                 FileMode.Create, FileAccess.Write))
+            {
+                dcs.WriteObject(f, persons);
+            }
         }
 
         /// <summary>

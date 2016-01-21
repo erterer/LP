@@ -44,6 +44,7 @@
             this.tbNaam = new System.Windows.Forms.TextBox();
             this.lblNaam = new System.Windows.Forms.Label();
             this.lbDieren = new System.Windows.Forms.ListBox();
+            this.btnOpslaan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbGebied)).BeginInit();
             this.gbWaarneming.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPunten)).BeginInit();
@@ -62,6 +63,7 @@
             // 
             // gbWaarneming
             // 
+            this.gbWaarneming.Controls.Add(this.btnOpslaan);
             this.gbWaarneming.Controls.Add(this.lbDieren);
             this.gbWaarneming.Controls.Add(this.label5);
             this.gbWaarneming.Controls.Add(this.nudPunten);
@@ -214,8 +216,18 @@
             this.lbDieren.FormattingEnabled = true;
             this.lbDieren.Location = new System.Drawing.Point(9, 313);
             this.lbDieren.Name = "lbDieren";
-            this.lbDieren.Size = new System.Drawing.Size(185, 316);
+            this.lbDieren.Size = new System.Drawing.Size(185, 290);
             this.lbDieren.TabIndex = 16;
+            // 
+            // btnOpslaan
+            // 
+            this.btnOpslaan.Location = new System.Drawing.Point(9, 625);
+            this.btnOpslaan.Name = "btnOpslaan";
+            this.btnOpslaan.Size = new System.Drawing.Size(185, 38);
+            this.btnOpslaan.TabIndex = 17;
+            this.btnOpslaan.Text = "Opslaan";
+            this.btnOpslaan.UseVisualStyleBackColor = true;
+            this.btnOpslaan.Click += new System.EventHandler(this.btnOpslaan_Click);
             // 
             // formBezoek
             // 
@@ -254,6 +266,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox lbDieren;
+        private System.Windows.Forms.Button btnOpslaan;
     }
 }
 
