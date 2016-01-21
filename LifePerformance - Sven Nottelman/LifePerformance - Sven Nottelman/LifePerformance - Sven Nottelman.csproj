@@ -48,19 +48,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Database.cs" />
-    <Compile Include="Data\GebruikerOracleContext.cs" />
-    <Compile Include="Data\IGebruiker.cs" />
-    <Compile Include="Forms\Inlogscherm.cs">
+    <Compile Include="Forms\formBezoek.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Inlogscherm.Designer.cs">
-      <DependentUpon>Inlogscherm.cs</DependentUpon>
+    <Compile Include="Forms\formBezoek.Designer.cs">
+      <DependentUpon>formBezoek.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logic\GebruikerRepository.cs" />
+    <Compile Include="Forms\formWaarneming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formWaarneming.Designer.cs">
+      <DependentUpon>formWaarneming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hoofdscherm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hoofdscherm.Designer.cs">
+      <DependentUpon>Hoofdscherm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bezoek.cs" />
+    <Compile Include="Models\Dier.cs" />
+    <Compile Include="Models\Gebied.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\SoortWaarneming.cs" />
+    <Compile Include="Models\Vogel.cs" />
+    <Compile Include="Models\Waarneming.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Inlogscherm.resx">
-      <DependentUpon>Inlogscherm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\formBezoek.resx">
+      <DependentUpon>formBezoek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,7 +101,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="Logic\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

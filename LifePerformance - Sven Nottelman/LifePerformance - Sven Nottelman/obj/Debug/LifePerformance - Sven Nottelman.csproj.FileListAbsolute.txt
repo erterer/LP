@@ -5,8 +5,8 @@ C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sv
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\bin\Debug\LifePerformance - Sven Nottelman.pdb
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance - Sven Nottelman.csprojResolveAssemblyReference.cache
-C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance___Sven_Nottelman.FormInloggen.resources
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance___Sven_Nottelman.Properties.Resources.resources
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance - Sven Nottelman.csproj.GenerateResource.Cache
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance - Sven Nottelman.exe
 C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance - Sven Nottelman.pdb
+C:\Users\Sven\Fontys\P3\LP\LifePerformance - Sven Nottelman\LifePerformance - Sven Nottelman\obj\Debug\LifePerformance___Sven_Nottelman.formBezoek.resources
