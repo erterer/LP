@@ -53,13 +53,27 @@ namespace LifePerformance___Sven_Nottelman.Forms
             {
                 MessageBox.Show("Selecteer een project");
             }
+            else if(nudMinutenStart.Value == 0 || nudMinutenEind.Value == 0 || nudUrenStart.Value == 0 || nudUrenEind.Value == 0)
+            {
+                MessageBox.Show("Vul geldige tijden in");
+            }
+            else if(dateStart.Value.Year == 2010 && dateStart.Value.Day == 1 && dateStart.Value.Month == 1)
+            {
+                MessageBox.Show("Vul een geldige datum in");
+            }
+            else if (dateEind.Value.Year == 2010 && dateEind.Value.Day == 1 && dateEind.Value.Month == 1)
+            {
+                MessageBox.Show("Vul een geldige datum in");
+            }
             else
             {
                 foreach (var v in repo.Projecten)
                 {
                     if (v.Naam == lbProjecten.SelectedItem.ToString())
                     {
-                        var formBezoek = new formBezoek(v);
+                        DateTime start = new DateTime(dateStart.Value.Year, dateStart.Value.Month, dateStart.Value.Day, Convert.ToInt32(nudUrenStart.Value), Convert.ToInt32(nudMinutenStart.Value), 0);
+                        DateTime eind = new DateTime(dateEind.Value.Year, dateEind.Value.Month, dateEind.Value.Day, Convert.ToInt32(nudUrenEind.Value), Convert.ToInt32(nudMinutenEind.Value), 0);
+                        var formBezoek = new formBezoek(v, start, eind);
                         formBezoek.ShowDialog();
                     }
                 }

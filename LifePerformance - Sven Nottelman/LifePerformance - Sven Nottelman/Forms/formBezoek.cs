@@ -22,16 +22,22 @@ namespace LifePerformance___Sven_Nottelman
         //Maken van een bezoek
         private Bezoek bezoek;
 
+        //Repository dieren
         private DierenRepository repo;
 
+        //Diereninformatie
+        string dierNaam;
+        string dierAfkorting;
+
         //Maken van de form en plaatsen van de plattegrond
-        public formBezoek(Project project)
+        public formBezoek(Project project, DateTime start, DateTime eind)
         {
             InitializeComponent();
             this.project = project;
             repo = new DierenRepository(new DierenOracleContext());
             LaadGebied();
             LaadDieren();
+            bezoek = new Bezoek(start, eind);
         }
 
         /// <summary>
@@ -48,6 +54,9 @@ namespace LifePerformance___Sven_Nottelman
             }
         }
 
+        /// <summary>
+        /// Deze methode haalt alle dieren op en zet ze in de lijst
+        /// </summary>
         private void LaadDieren()
         {
             repo.HaalDierenOp();
@@ -58,10 +67,16 @@ namespace LifePerformance___Sven_Nottelman
             lbDieren.Items.Clear();
             foreach(var v in repo.Dieren)
             {
-                lbDieren.Items.Add(v.Naam + "  " + v.Afkorting);
+                lbDieren.Items.Add(v.Naam);
             }
         }
 
+        /// <summary>
+        /// Deze muisklik maakt een label aan op de kaart en maakt hier direct een waarneming van, hiervoor worden
+        /// de ingevulde gegevens gebruikt
+        /// </summary>
+        /// <param name="sender">Event mouseclick</param>
+        /// <param name="e">Event mouseclick</param>
         private void pbGebied_MouseClick(object sender, MouseEventArgs e)
         {
             if (rbMaken.Checked == true)
@@ -80,24 +95,35 @@ namespace LifePerformance___Sven_Nottelman
                     sf.Alignment = StringAlignment.Center;
                     graphics.DrawString(tekst, this.Font, Brushes.Black, point, sf);
 
-                    //Maken van een waarneming
+                    //Tijdstip en punten verzamelen
                     int uur = Convert.ToInt32(nudUren.Value);
                     int min = Convert.ToInt32(nudMinuten.Value);
                     int punten = Convert.ToInt32(nudPunten.Value);
                     DateTime tijdstip = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, uur, min, 10);
 
-                    //if (cbSoort.Text == "Vogel aanwezig")
-                    //{
-                    //    bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.VogelAanwezig, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
-                    //}
-                    //else if(cbSoort.Text == "Territorium indicerend")
-                    //{
-                    //    bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.TerritorumInciderend, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
-                    //}
-                    //else if(cbSoort.Text == "Nest indicerend")
-                    //{
-                    //    bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.NestIndicerend, tijdstip, punten, new Vogel(tbNaamDier.Text, tbAfkorting.Text)));
-                    //}
+                    //Ophalen geselecteerd dier
+                    foreach(var v in repo.Dieren)
+                    {
+                        if (repo.Dieren.IndexOf(v) == lbDieren.SelectedIndex)
+                        {
+                            dierNaam = v.Naam;
+                            dierAfkorting = v.Afkorting;
+                        }
+                    }
+
+                    //Aanmaken waarneming
+                    if (cbSoort.Text == "Vogel aanwezig")
+                    {
+                        bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.VogelAanwezig, tijdstip, punten, new Vogel(dierNaam, dierAfkorting)));
+                    }
+                    else if (cbSoort.Text == "Territorium indicerend")
+                    {
+                        bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.TerritorumInciderend, tijdstip, punten, new Vogel(dierNaam, dierAfkorting)));
+                    }
+                    else if (cbSoort.Text == "Nest indicerend")
+                    {
+                        bezoek.waarnemingen.Add(new Waarneming(tbNaam.Text, SoortWaarneming.NestIndicerend, tijdstip, punten, new Vogel(dierNaam, dierAfkorting)));
+                    }
                 }
                 else
                 {

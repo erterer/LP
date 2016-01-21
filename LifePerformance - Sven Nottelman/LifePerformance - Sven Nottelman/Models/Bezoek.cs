@@ -10,8 +10,6 @@ namespace LifePerformance___Sven_Nottelman.Models
     {
         //Lijst met waarnemingen
         public List<Waarneming> waarnemingen { get; set; }
-        //Datum van het bezoek
-        public DateTime Datum { get; set; }
 
         //Aanvangst van het bezoek, starttijd
         public DateTime StartTijd { get; set; }
@@ -25,9 +23,8 @@ namespace LifePerformance___Sven_Nottelman.Models
         /// <param name="datum">Datum van het bezoek</param>
         /// <param name="startTijd">Aanvangst van het bezoek</param>
         /// <param name="eindTijd">Eindtijd van het bezoek</param>
-        public Bezoek(DateTime datum, DateTime startTijd, DateTime eindTijd)
+        public Bezoek(DateTime startTijd, DateTime eindTijd)
         {
-            Datum = datum;
             StartTijd = startTijd;
             EindTijd = eindTijd;
             waarnemingen = new List<Waarneming>();
