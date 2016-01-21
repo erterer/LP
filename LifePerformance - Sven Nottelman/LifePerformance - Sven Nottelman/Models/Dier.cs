@@ -7,6 +7,7 @@ using System.Runtime.Serialization;
 
 namespace LifePerformance___Sven_Nottelman.Models
 {
+    [DataContract(Namespace = "")]
     public abstract class Dier
     {
         //Naam van een dier

@@ -166,5 +166,16 @@ namespace LifePerformance___Sven_Nottelman
                 MessageBox.Show("Er is een onbekende fout opgetreden bij het opslaan");
             }
         }
+
+        /// <summary>
+        /// Achter deze button bevind zich een form met extra mogelijkheden voor het project
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnOpties_Click(object sender, EventArgs e)
+        {
+            var f = new Forms.formOpties();
+            f.ShowDialog();
+        }
     }
 }

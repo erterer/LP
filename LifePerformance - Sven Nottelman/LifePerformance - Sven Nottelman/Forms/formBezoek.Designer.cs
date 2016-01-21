@@ -30,6 +30,8 @@
         {
             this.pbGebied = new System.Windows.Forms.PictureBox();
             this.gbWaarneming = new System.Windows.Forms.GroupBox();
+            this.btnOpslaan = new System.Windows.Forms.Button();
+            this.lbDieren = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.nudPunten = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,8 +45,7 @@
             this.rbMaken = new System.Windows.Forms.RadioButton();
             this.tbNaam = new System.Windows.Forms.TextBox();
             this.lblNaam = new System.Windows.Forms.Label();
-            this.lbDieren = new System.Windows.Forms.ListBox();
-            this.btnOpslaan = new System.Windows.Forms.Button();
+            this.btnOpties = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbGebied)).BeginInit();
             this.gbWaarneming.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPunten)).BeginInit();
@@ -63,6 +64,7 @@
             // 
             // gbWaarneming
             // 
+            this.gbWaarneming.Controls.Add(this.btnOpties);
             this.gbWaarneming.Controls.Add(this.btnOpslaan);
             this.gbWaarneming.Controls.Add(this.lbDieren);
             this.gbWaarneming.Controls.Add(this.label5);
@@ -84,6 +86,24 @@
             this.gbWaarneming.TabIndex = 1;
             this.gbWaarneming.TabStop = false;
             this.gbWaarneming.Text = "Waarneming";
+            // 
+            // btnOpslaan
+            // 
+            this.btnOpslaan.Location = new System.Drawing.Point(118, 625);
+            this.btnOpslaan.Name = "btnOpslaan";
+            this.btnOpslaan.Size = new System.Drawing.Size(99, 38);
+            this.btnOpslaan.TabIndex = 17;
+            this.btnOpslaan.Text = "Opslaan";
+            this.btnOpslaan.UseVisualStyleBackColor = true;
+            this.btnOpslaan.Click += new System.EventHandler(this.btnOpslaan_Click);
+            // 
+            // lbDieren
+            // 
+            this.lbDieren.FormattingEnabled = true;
+            this.lbDieren.Location = new System.Drawing.Point(9, 313);
+            this.lbDieren.Name = "lbDieren";
+            this.lbDieren.Size = new System.Drawing.Size(185, 290);
+            this.lbDieren.TabIndex = 16;
             // 
             // label5
             // 
@@ -211,23 +231,15 @@
             this.lblNaam.TabIndex = 0;
             this.lblNaam.Text = "Naam:";
             // 
-            // lbDieren
+            // btnOpties
             // 
-            this.lbDieren.FormattingEnabled = true;
-            this.lbDieren.Location = new System.Drawing.Point(9, 313);
-            this.lbDieren.Name = "lbDieren";
-            this.lbDieren.Size = new System.Drawing.Size(185, 290);
-            this.lbDieren.TabIndex = 16;
-            // 
-            // btnOpslaan
-            // 
-            this.btnOpslaan.Location = new System.Drawing.Point(9, 625);
-            this.btnOpslaan.Name = "btnOpslaan";
-            this.btnOpslaan.Size = new System.Drawing.Size(185, 38);
-            this.btnOpslaan.TabIndex = 17;
-            this.btnOpslaan.Text = "Opslaan";
-            this.btnOpslaan.UseVisualStyleBackColor = true;
-            this.btnOpslaan.Click += new System.EventHandler(this.btnOpslaan_Click);
+            this.btnOpties.Location = new System.Drawing.Point(6, 625);
+            this.btnOpties.Name = "btnOpties";
+            this.btnOpties.Size = new System.Drawing.Size(95, 38);
+            this.btnOpties.TabIndex = 18;
+            this.btnOpties.Text = "Opties";
+            this.btnOpties.UseVisualStyleBackColor = true;
+            this.btnOpties.Click += new System.EventHandler(this.btnOpties_Click);
             // 
             // formBezoek
             // 
@@ -267,6 +279,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox lbDieren;
         private System.Windows.Forms.Button btnOpslaan;
+        private System.Windows.Forms.Button btnOpties;
     }
 }
 

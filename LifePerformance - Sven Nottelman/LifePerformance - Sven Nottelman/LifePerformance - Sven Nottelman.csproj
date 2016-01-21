@@ -36,6 +36,7 @@
     <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,12 @@
     <Compile Include="Forms\formBezoek.Designer.cs">
       <DependentUpon>formBezoek.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\formOpties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formOpties.Designer.cs">
+      <DependentUpon>formOpties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Hoofdscherm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +84,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\formBezoek.resx">
       <DependentUpon>formBezoek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formOpties.resx">
+      <DependentUpon>formOpties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Hoofdscherm.resx">
       <DependentUpon>Hoofdscherm.cs</DependentUpon>
