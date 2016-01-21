@@ -5,6 +5,7 @@ using LifePerformance___Sven_Nottelman.Forms;
 using LifePerformance___Sven_Nottelman.Logic;
 using LifePerformance___Sven_Nottelman.Models;
 using System.Collections.Generic;
+using LifePerformance___Sven_Nottelman;
 
 namespace LivePerformanceTests
 {
@@ -90,12 +91,39 @@ namespace LivePerformanceTests
         }
 
         /// <summary>
-        /// 
+        /// Forms testen
         /// </summary>
         [TestMethod]
-        public void Test()
+        public void TestFormOpties()
         {
+            Bezoek b = new Bezoek(DateTime.Now.Date, DateTime.Now.Date);
+            Project p = new Project("Sven Nottelman");
+            var v = new formOpties(b, p);
 
+            Assert.IsNotNull(v);
+        }
+
+        /// <summary>
+        /// Forms testen
+        /// </summary>
+        [TestMethod]
+        public void TestFormBezoek()
+        {
+            Project p = new Project("Sven Nottelman");
+            var v = new formBezoek(p, DateTime.Now.Date, DateTime.Now.Date);
+
+            Assert.IsNotNull(v);
+        }
+
+        /// <summary>
+        /// Forms testen
+        /// </summary>
+        [TestMethod]
+        public void TestHoofdForm()
+        {
+            var v = new Hoofdscherm();
+
+            Assert.IsNotNull(v);
         }
     }
 }
